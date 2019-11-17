@@ -192,7 +192,8 @@ class FlirImageExtractor:
 
         # temperature from radiance
         temp_celcius = PB / log(PR1 / (PR2 * (raw_obj + PO)) + PF) - 273.15
-        return temp_celcius
+        temp_kelvin = PB / log(PR1 / (PR2 * (raw_obj + PO)) + PF)
+        return temp_kelvin
 
     @staticmethod
     def extract_float(dirtystr):
